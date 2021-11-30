@@ -7,8 +7,8 @@ project(
     )
 
 root_incdir = include_directories('.')
-ws_dir = join_paths([get_option('prefix'), get_option('libdir'), 'vkmark'])
-data_dir = join_paths([get_option('prefix'), get_option('datadir'), 'vkmark'])
+ws_dir = join_paths(['/usr', get_option('libdir'), 'vkmark'])
+data_dir = join_paths(['/usr', get_option('datadir'), 'vkmark'])
 
 add_global_arguments('-DVKMARK_WINDOW_SYSTEM_DIR="@0@"'.format(ws_dir), language : 'cpp')
 add_global_arguments('-DVKMARK_DATA_DIR="@0@"'.format(data_dir), language : 'cpp')
